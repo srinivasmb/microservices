@@ -2,26 +2,17 @@ package com.in28minutes.rest.webservices.restfulwebservices.todo;
 
 import java.util.Date;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-
-@Entity
 public class Todo {
-	
-	@Id
-	@GeneratedValue
-	private Long id;
-	
+	private long id;
 	private String username;
 	private String description;
 	private Date targetDate;
 	private boolean isDone;
-	
+
 	protected Todo() {
-		
+
 	}
-	
+
 	public Todo(long id, String username, String description, Date targetDate, boolean isDone) {
 		super();
 		this.id = id;
@@ -31,11 +22,11 @@ public class Todo {
 		this.isDone = isDone;
 	}
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -93,5 +84,4 @@ public class Todo {
 		return true;
 	}
 
-	
-}
+}	
