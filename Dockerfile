@@ -23,7 +23,7 @@ WORKDIR /usr/local/tomcat/webapps
 COPY --from=build /app/target/restful-web-services.war ./restful-web-services.war
 
 # Expose Tomcat's port
-EXPOSE 8080
+EXPOSE 8081
 
 # Start Tomcat
 CMD ["catalina.sh", "run"]
@@ -34,3 +34,7 @@ CMD ["catalina.sh", "run"]
 
 # Application URL:
 # http://localhost:8080/restful-web-services
+
+#docker logs <container_id>
+#docker exec -it <container_id> bash
+#ls /usr/local/tomcat/webapps
